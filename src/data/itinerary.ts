@@ -122,12 +122,12 @@ export const itineraryData: DayItinerary[] = [
         ],
       },
       {
-        name: "酒店Check-in · 放行李",
-        desc: "地铁前往酒店办理入住，放下行李轻装出行。建议住克拉码头/牛车水附近，方便后续行程",
+        name: "滨海宾乐雅酒店 Check-in",
+        desc: "PARKROYAL COLLECTION Marina Bay，地址：6 Raffles Boulevard。毗邻滨海湾，步行可达鱼尾狮、滨海艺术中心，距City Hall地铁站步行约10分钟",
         time: "17:00-17:45",
         icon: "fa-suitcase-rolling",
         img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
-        tips: "轻装出行！带着行李逛滨海湾会很累",
+        tips: "轻装出行！放好行李再去滨海湾公园看灯光秀",
       },
       {
         name: "滨海湾公园夜景",
@@ -227,7 +227,7 @@ export const itineraryData: DayItinerary[] = [
     spots: [
       {
         name: "① 珍珠坊 → ② 牛车水",
-        desc: "从珍珠坊出发，步行2分钟到牛车水。逛华人老街区，感受南洋风情，Maxwell美食中心吃早餐",
+        desc: "从滨海宾乐雅酒店出发，地铁到牛车水站。逛华人老街区，感受南洋风情，Maxwell美食中心吃早餐",
         time: "09:00-10:15",
         icon: "fa-torii-gate",
         img: "https://images.unsplash.com/photo-1536163713675-42cf53cbd4f5?w=600&q=80",
@@ -513,11 +513,12 @@ export const itineraryData: DayItinerary[] = [
         ],
       },
       {
-        name: "回酒店取行李 · 前往机场",
-        desc: "从小印度NE线回酒店取行李，再地铁前往樟宜机场，提前2小时值机",
+        name: "回滨海宾乐雅酒店取行李 · 前往机场",
+        desc: "从小印度NE线回PARKROYAL COLLECTION Marina Bay取行李退房，再地铁前往樟宜机场，提前2小时值机",
         time: "15:00-16:30",
         icon: "fa-suitcase-rolling",
         img: "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=600&q=80",
+        tips: "可提前寄存行李到前台，退房后再取",
       },
       {
         name: "飞往普吉岛",

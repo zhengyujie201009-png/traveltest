@@ -16,15 +16,20 @@ const funcNavItems = [
 ]
 
 const dayGroups = [
-  { flag: '🇸🇬', days: [1, 2, 3], mapHref: '#sg-map' },
-  { flag: '🇹🇭', days: [4, 5, 6], mapHref: '#day-4' },
-  { flag: '🇹🇭', days: [7, 8, 9], mapHref: '#day-7' },
+  { flag: '🇸🇬', days: [1, 2, 3], mapHref: '#sg-map', cityIdx: 0 },
+  { flag: '🇹🇭', days: [4, 5, 6], mapHref: '#day-4', cityIdx: 1 },
+  { flag: '🇹🇭', days: [7, 8, 9], mapHref: '#day-7', cityIdx: 2 },
 ]
+
+function switchCityTab(cityIdx: number) {
+  window.dispatchEvent(new CustomEvent('switch-city-tab', { detail: cityIdx }))
+}
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [inItinerary, setInItinerary] = useState(false)
   const [activeDay, setActiveDay] = useState(0)
+  const [activeCityIdx, setActiveCityIdx] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
 
   const detectState = useCallback(() => {
@@ -47,6 +52,9 @@ export default function Navbar() {
         }
       }
       setActiveDay(current)
+      if (current >= 1 && current <= 3) setActiveCityIdx(0)
+      else if (current >= 4 && current <= 6) setActiveCityIdx(1)
+      else if (current >= 7 && current <= 9) setActiveCityIdx(2)
     }
   }, [])
 
@@ -56,9 +64,38 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', detectState)
   }, [detectState])
 
-  const scrollToDay = (day: number) => {
-    const el = document.getElementById(`day-${day}`)
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const idx = (e as CustomEvent).detail as number
+      setActiveCityIdx(idx)
+    }
+    window.addEventListener('city-tab-changed', handler)
+    return () => window.removeEventListener('city-tab-changed', handler)
+  }, [])
+
+  const handleDayClick = (day: number) => {
+    const group = dayGroups.find(g => g.days.includes(day))
+    if (group && group.cityIdx !== activeCityIdx) {
+      switchCityTab(group.cityIdx)
+      setTimeout(() => {
+        const el = document.getElementById(`day-${day}`)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 100)
+    } else {
+      const el = document.getElementById(`day-${day}`)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const handleFlagClick = (e: React.MouseEvent, group: typeof dayGroups[0]) => {
+    e.preventDefault()
+    if (group.cityIdx !== activeCityIdx) {
+      switchCityTab(group.cityIdx)
+    }
+    setTimeout(() => {
+      const el = document.getElementById('itinerary')
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 100)
   }
 
   return (
@@ -86,13 +123,18 @@ export default function Navbar() {
               {dayGroups.map((group, gi) => (
                 <div key={gi} className="flex items-center">
                   {gi > 0 && <div className="h-4 w-px bg-gray-200 mx-1.5" />}
-                  <a href={group.mapHref} className="text-sm mr-1 hover:scale-125 transition-transform inline-block cursor-pointer">{group.flag}</a>
+                  <a href="#" onClick={(e) => handleFlagClick(e, group)}
+                    className={`text-sm mr-1 transition-all inline-block cursor-pointer ${activeCityIdx === gi ? 'scale-125' : 'hover:scale-110 opacity-70 hover:opacity-100'}`}>
+                    {group.flag}
+                  </a>
                   {group.days.map((day) => (
-                    <button key={day} onClick={() => scrollToDay(day)}
+                    <button key={day} onClick={() => handleDayClick(day)}
                       className={`w-8 h-8 rounded-lg text-sm font-medium transition-all duration-200 ${
                         activeDay === day
                           ? 'bg-blue-500 text-white shadow-md shadow-blue-200'
-                          : 'text-gray-500 hover:bg-gray-100 hover:text-gray-800'
+                          : activeCityIdx === gi
+                            ? 'text-gray-600 hover:bg-gray-100 hover:text-gray-800'
+                            : 'text-gray-400 hover:bg-gray-100 hover:text-gray-600'
                       }`}>
                       {day}
                     </button>
@@ -134,7 +176,7 @@ export default function Navbar() {
               <div className="flex flex-wrap gap-2 px-4 pb-2">
                 {dayGroups.map((group) =>
                   group.days.map((day) => (
-                    <button key={day} onClick={() => { scrollToDay(day); setMenuOpen(false) }}
+                    <button key={day} onClick={() => { handleDayClick(day); setMenuOpen(false) }}
                       className={`w-9 h-9 rounded-lg text-sm font-medium transition-all ${
                         activeDay === day
                           ? 'bg-blue-500 text-white shadow-md'
