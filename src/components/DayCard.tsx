@@ -1,20 +1,7 @@
 import { useState } from 'react'
+import type { DayItinerary } from '../data/itinerary'
 
-interface Spot {
-  name: string; desc: string; time: string; icon: string; img: string; tips?: string
-  photo?: { position: string; pose: string; bestTime: string; refImg: string }
-  easterEggs?: { name: string; desc: string; icon: string; address?: string }[]
-}
-interface Meal {
-  type: string; name: string; icon: string; price?: string; img?: string
-  options?: { name: string; desc: string; price: string; img: string; tag?: string }[]
-}
-interface DayData {
-  day: number; date: string; title: string; theme: string; weather: string; weatherIcon: string
-  headerImg: string; color: string; spots: Spot[]; meals: Meal[]; transport: string; budget: number
-}
-
-export default function DayCard({ day }: { day: DayData }) {
+export default function DayCard({ day }: { day: DayItinerary }) {
   const [expandedMeal, setExpandedMeal] = useState<number | null>(null)
   const [expandedPhoto, setExpandedPhoto] = useState<number | null>(null)
 

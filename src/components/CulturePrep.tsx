@@ -1,8 +1,37 @@
 import { useState, useRef, useEffect } from 'react'
 import { Gd, Xd, Qt, qu, Zd, type CultureItem, type CultureType } from '../data/culture'
 
-function CultureCard({ item, index }: { item: CultureItem; index: number }) {
+const audioRef: { current: HTMLAudioElement | null; playingUrl: string | null } = { current: null, playingUrl: null }
+
+function CultureCard({ item, index, playingUrl, onPlay }: { item: CultureItem; index: number; playingUrl: string | null; onPlay: (url: string | null) => void }) {
   const config = qu[item.type]
+  const isMusic = item.type === 'music' && item.previewUrl
+  const isPlaying = isMusic && playingUrl === item.previewUrl
+
+  const handlePlay = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (!item.previewUrl) return
+
+    if (isPlaying) {
+      audioRef.current?.pause()
+      onPlay(null)
+      return
+    }
+
+    if (audioRef.current) {
+      audioRef.current.pause()
+    }
+    const audio = new Audio(item.previewUrl)
+    audioRef.current = audio
+    audioRef.playingUrl = item.previewUrl
+    audio.play()
+    onPlay(item.previewUrl)
+    audio.onended = () => {
+      onPlay(null)
+      audioRef.playingUrl = null
+    }
+  }
+
   return (
     <div className="min-w-[280px] max-w-[280px] bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover group flex-shrink-0 snap-start"
       style={{ animationDelay: `${index * 0.05}s` }}>
@@ -24,6 +53,21 @@ function CultureCard({ item, index }: { item: CultureItem; index: number }) {
             {item.country === 'sg' ? '🇸🇬' : '🇹🇭'}
           </span>
         </div>
+        {isMusic && (
+          <button onClick={handlePlay}
+            className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isPlaying ? 'bg-black/30' : 'bg-transparent hover:bg-black/20'}`}>
+            <div className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${isPlaying ? 'bg-white/95 scale-100' : 'bg-white/80 scale-90 opacity-0 group-hover:opacity-100 group-hover:scale-100'}`}>
+              <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'} text-lg ${isPlaying ? 'text-emerald-500' : 'text-gray-700 ml-1'}`} />
+            </div>
+            {isPlaying && (
+              <div className="absolute bottom-12 left-3 right-3 flex items-center gap-1">
+                {[...Array(12)].map((_, i) => (
+                  <div key={i} className="flex-1 bg-emerald-400 rounded-full animate-pulse" style={{ height: `${8 + Math.random() * 16}px`, animationDelay: `${i * 0.1}s`, animationDuration: `${0.4 + Math.random() * 0.4}s` }} />
+                ))}
+              </div>
+            )}
+          </button>
+        )}
         <div className="absolute bottom-3 left-3 right-3">
           <h4 className="text-white font-bold text-base">{item.title}</h4>
           <p className="text-white/70 text-xs mt-0.5 truncate">{item.subtitle}</p>
@@ -31,6 +75,13 @@ function CultureCard({ item, index }: { item: CultureItem; index: number }) {
       </div>
       <div className="p-4">
         <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{item.desc}</p>
+        {isMusic && (
+          <button onClick={handlePlay}
+            className={`mt-3 w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-300 ${isPlaying ? 'bg-emerald-50 text-emerald-600 border border-emerald-200' : 'bg-gray-50 text-gray-500 border border-gray-100 hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200'}`}>
+            <i className={`fa-solid ${isPlaying ? 'fa-pause' : 'fa-play'} text-[10px]`} />
+            {isPlaying ? '暂停试听' : '▶ 点击试听 30s'}
+          </button>
+        )}
       </div>
     </div>
   )
@@ -85,7 +136,7 @@ function FeaturedCarousel() {
   )
 }
 
-function HorizontalList({ items, title }: { items: CultureItem[]; title: string }) {
+function HorizontalList({ items, title, playingUrl, onPlay }: { items: CultureItem[]; title: string; playingUrl: string | null; onPlay: (url: string | null) => void }) {
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
@@ -122,7 +173,7 @@ function HorizontalList({ items, title }: { items: CultureItem[]; title: string 
         className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
         {items.map((item, i) => (
-          <CultureCard key={`${item.title}-${i}`} item={item} index={i} />
+          <CultureCard key={`${item.title}-${i}`} item={item} index={i} playingUrl={playingUrl} onPlay={onPlay} />
         ))}
       </div>
     </div>
@@ -132,6 +183,7 @@ function HorizontalList({ items, title }: { items: CultureItem[]; title: string 
 export default function CulturePrep() {
   const [activeTab, setActiveTab] = useState<CultureType>('movie')
   const [activeCountry, setActiveCountry] = useState<'all' | 'sg' | 'th'>('all')
+  const [playingUrl, setPlayingUrl] = useState<string | null>(null)
 
   const allItems = [...Gd, ...Xd]
   const filtered = allItems.filter(item => {
@@ -141,14 +193,14 @@ export default function CulturePrep() {
   })
 
   return (
-    <section className="py-16 px-4 bg-gradient-to-br from-purple-50/50 via-white to-pink-50/50">
+    <section id="culture-prep" className="py-16 px-4 bg-gradient-to-br from-purple-50/50 via-white to-pink-50/50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 rounded-full bg-purple-50 text-purple-600 text-sm font-medium mb-4">
-            <i className="fa-solid fa-graduation-cap mr-2" />行前功课
+            <i className="fa-solid fa-graduation-cap mr-2" />旅行前的文化预习
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Noto Serif SC', serif" }}>文化预习</h2>
-          <p className="text-gray-500 max-w-lg mx-auto">出发前看看这些影视、书籍和音乐，让旅途更有深度</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Noto Serif SC', serif" }}>先懂再看，沉浸式旅行</h2>
+          <p className="text-gray-500 max-w-lg mx-auto">出发前看看这些影视、书籍和音乐，让旅途记忆更深刻</p>
         </div>
 
         <FeaturedCarousel />
@@ -172,24 +224,7 @@ export default function CulturePrep() {
           </div>
         </div>
 
-        <HorizontalList items={filtered} title={`${qu[activeTab].label}推荐 · ${activeCountry === 'all' ? '全部' : activeCountry === 'sg' ? '新加坡' : '泰国'}`} />
-
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { icon: 'fa-film', label: '影视', count: allItems.filter(i => i.type === 'movie').length, color: '#f5576c', gradient: 'from-rose-500 to-pink-600' },
-            { icon: 'fa-book', label: '书籍', count: allItems.filter(i => i.type === 'book').length, color: '#667eea', gradient: 'from-indigo-500 to-purple-600' },
-            { icon: 'fa-music', label: '音乐', count: allItems.filter(i => i.type === 'music').length, color: '#43e97b', gradient: 'from-emerald-400 to-teal-500' },
-            { icon: 'fa-star', label: '精选推荐', count: Qt.length, color: '#ffd93d', gradient: 'from-amber-400 to-orange-500' },
-          ].map((stat, i) => (
-            <div key={i} className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 text-center card-hover">
-              <div className={`w-10 h-10 rounded-xl bg-gradient-to-r ${stat.gradient} flex items-center justify-center mx-auto mb-2`}>
-                <i className={`fa-solid ${stat.icon} text-white text-sm`} />
-              </div>
-              <div className="text-2xl font-bold text-gray-800">{stat.count}</div>
-              <div className="text-xs text-gray-400">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        <HorizontalList items={filtered} title={`${qu[activeTab].label}推荐 · ${activeCountry === 'all' ? '全部' : activeCountry === 'sg' ? '新加坡' : '泰国'}`} playingUrl={playingUrl} onPlay={setPlayingUrl} />
       </div>
     </section>
   )

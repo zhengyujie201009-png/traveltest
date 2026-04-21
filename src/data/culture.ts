@@ -14,6 +14,7 @@ export interface CultureItem {
   img: string;
   tag?: string;
   country: Country;
+  previewUrl?: string;
 }
 
 export interface TypeConfig {
@@ -168,6 +169,7 @@ export const Gd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&q=80',
     tag: '新加坡之光',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/78/3a/3c/783a3ce8-65d7-0527-3ddc-0d6fa80ae1ac/mzaf_7010661630560700140.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -176,6 +178,7 @@ export const Gd: CultureItem[] = [
     desc: '《天黑黑》《遇见》《绿光》…来自新加坡的华语天后，旅途中必听的温暖歌声',
     img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&q=80',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/9e/06/17/9e061768-b9a1-bd04-da3c-45744fb3282d/mzaf_13127211952509430510.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -185,6 +188,7 @@ export const Gd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400&q=80',
     tag: '英文indie',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/10/76/e1/1076e10b-4a44-7ac0-a8ac-ad04764b23b4/mzaf_10482519057130621827.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -193,6 +197,7 @@ export const Gd: CultureItem[] = [
     desc: '新加坡电子音乐才女，《HURT》登上全球榜单。戴面具表演的神秘风格，逛夜景时的完美BGM',
     img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&q=80',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/ad/ec/59/adec59d1-3fe4-1c73-be38-01e90cdde2ca/mzaf_4514288732731703702.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -201,6 +206,7 @@ export const Gd: CultureItem[] = [
     desc: '新加坡最具才华的创作歌手，《Light Breaks In》《CHECK-HOOK》充满诗意的都市民谣',
     img: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=400&q=80',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/45/92/51/4592519c-2d07-0686-5a4b-17ad7d535263/mzaf_7602394705815236836.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -210,6 +216,7 @@ export const Gd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=400&q=80',
     tag: 'TikTok爆款',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/94/da/e4/94dae427-3ef5-67fe-db14-8d08db23e837/mzaf_9726401903868329886.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -218,6 +225,7 @@ export const Gd: CultureItem[] = [
     desc: '新加坡独立女声，《Sticky Leaves》《Paris 12》空灵梦幻的嗓音，被BBC Radio推荐的宝藏歌手',
     img: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&q=80',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview116/v4/b1/d5/19/b1d51991-d85d-d1d4-a4c9-4f9ac4bba069/mzaf_11459792069098725771.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -227,6 +235,7 @@ export const Gd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1504509546545-e000b4a62425?w=400&q=80',
     tag: '复古',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/4a/37/5b/4a375b32-cd29-2aff-ee9e-f41852078262/mzaf_16888367600935566467.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -236,6 +245,7 @@ export const Gd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=80',
     tag: '金曲奖x3',
     country: 'sg',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/55/32/31/553231d3-b023-362f-f64a-58f9890be961/mzaf_6250737161002888399.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -386,6 +396,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&q=80',
     tag: '泰国之光',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f5/10/49/f5104946-08c2-cb9c-4b8a-aa52bafa093d/mzaf_5120615441669569555.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -395,6 +406,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=400&q=80',
     tag: '海岛必听',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/12/76/62/1276629a-2b07-cfd4-97ad-8e8414050bfb/mzaf_4348425239984859892.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -403,6 +415,7 @@ export const Xd: CultureItem[] = [
     desc: '泰国最受欢迎的摇滚乐队，《คิดถึง》《ยาพิษ》即使听不懂泰文也会被旋律打动',
     img: 'https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=400&q=80',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/63/a3/bc/63a3bc00-e278-4b11-6b2d-425d5eaa0092/mzaf_11582245637568324144.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -411,6 +424,7 @@ export const Xd: CultureItem[] = [
     desc: '泰国音乐才子，风格横跨民谣到电子，《ขอ》温柔得让人融化，适合在海边日落时听',
     img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=400&q=80',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/45/64/38456420-c00a-eb67-4550-d0d35256c19e/mzaf_8580875879256891761.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -420,6 +434,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?w=400&q=80',
     tag: 'Z世代',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/89/96/60/89966041-eaff-b108-72d5-db3bbf3d4c25/mzaf_13749765083509436539.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -429,6 +444,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&q=80',
     tag: '泰剧OST',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview126/v4/88/e9/39/88e939b0-7dc8-d1c2-2057-03476b1a9da3/mzaf_17967177917612713126.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -437,6 +453,7 @@ export const Xd: CultureItem[] = [
     desc: '泰国流行乐坛常青树，《คิดถึง》甜美动人，是泰国人心中的国民女歌手',
     img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400&q=80',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/80/6b/be/806bbe17-a0cd-0850-0e95-0abbafa8d703/mzaf_5797731955138033893.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -446,6 +463,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1504509546545-e000b4a62425?w=400&q=80',
     tag: '新生代',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ef/51/7c/ef517cb6-6079-f8a8-a008-57ff527d78a5/mzaf_10502748824073134773.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -455,6 +473,7 @@ export const Xd: CultureItem[] = [
     img: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?w=400&q=80',
     tag: '经典',
     country: 'th',
+    previewUrl: 'https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/16/57/69/165769a6-1b64-88ce-8c01-4abd1d9f04cf/mzaf_10405585588235728421.plus.aac.p.m4a',
   },
   {
     type: 'music',
@@ -514,7 +533,7 @@ export const Zd: TabDefinition[] = [
 export const Rl: MapDayData[] = [
   {
     day: 1,
-    label: 'DAY 1 · 5.2',
+    label: '5.2 初见狮城',
     title: '初见狮城',
     color: '#667eea',
     img: '/map-day1.png',
@@ -523,7 +542,7 @@ export const Rl: MapDayData[] = [
   },
   {
     day: 2,
-    label: 'DAY 2 · 5.3',
+    label: '5.3 暴走狮城',
     title: '暴走狮城',
     color: '#f5576c',
     img: '/map-day2.png',
@@ -532,7 +551,7 @@ export const Rl: MapDayData[] = [
   },
   {
     day: 3,
-    label: 'DAY 3 · 5.4',
+    label: '5.4 三种文化、飞向海岛',
     title: '三种文化·飞向海岛',
     color: '#4facfe',
     img: '/map-day3.png',
@@ -541,7 +560,7 @@ export const Rl: MapDayData[] = [
   },
   {
     day: 0,
-    label: '🏆 全景总结',
+    label: '新加坡全景解锁',
     title: '新加坡全景解锁',
     color: '#10b981',
     img: '/map-all.png',

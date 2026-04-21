@@ -21,7 +21,7 @@ export interface Spot {
   time: string;
   icon: string;
   img: string;
-  tips: string;
+  tips?: string;
   photo?: PhotoSpot;
   easterEggs?: EasterEgg[];
 }
@@ -39,7 +39,7 @@ export interface Meal {
   name: string;
   icon: string;
   price: string;
-  img: string;
+  img?: string;
   options?: MealOption[];
 }
 
@@ -55,7 +55,7 @@ export interface DayItinerary {
   spots: Spot[];
   meals: Meal[];
   transport: string;
-  budget: string;
+  budget: number;
 }
 
 export interface PackingCategory {

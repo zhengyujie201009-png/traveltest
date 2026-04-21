@@ -51,7 +51,7 @@ export default function App() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Noto Serif SC', serif" }}>详细行程安排</h2>
           <p className="text-gray-500 max-w-lg mx-auto">每一天都精心规划，让旅途既充实又从容</p>
         </div>
-        {itineraryData.map((day, i) => (
+        {itineraryData.map((day) => (
           <DayCard key={day.day} day={day} />
         ))}
       </section>
