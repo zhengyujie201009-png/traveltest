@@ -579,33 +579,33 @@ export const PhuketMapData: MapDayData[] = [
 ];
 
 export const BangkokMapData: MapDayData[] = [
-  {
-    day: 0,
-    label: '曼谷全景解锁',
-    title: '曼谷全景解锁',
-    color: '#ef4444',
-    img: '/map-bangkok-overview.png',
-    spots: 13,
-    desc: '3天13个景点全部解锁！寺庙巡礼、购物美食、高空酒吧、夜市探险，感受天使之城的金碧辉煌',
-  },
-  {
-    day: 7,
-    label: '5.8 金碧辉煌·寺庙巡礼',
-    title: '金碧辉煌·寺庙巡礼',
-    color: '#ff6b6b',
-    img: '/map-bangkok-day7.png',
-    spots: 8,
-    desc: '坐船→大皇宫+玉佛寺→卧佛寺→Supanniga河景午餐→郑王庙→TYME Rooftop日落→Jodd Fairs夜市',
-  },
-  {
-    day: 8,
-    label: '5.9 买买买·最后的疯狂',
-    title: '买买买·最后的疯狂',
-    color: '#a855f7',
-    img: '/map-bangkok-day8.png',
-    spots: 6,
-    desc: '乍都乍周末市场→暹罗商圈+After You→建兴酒家咖喱蟹→Divana Spa→Octave高空酒吧→收拾行李',
-  },
+{
+day: 0,
+label: '曼谷全景解锁',
+title: '曼谷全景解锁',
+color: '#ef4444',
+img: '/map-bangkok-overview.png',
+spots: 14,
+desc: '3天14个景点全部解锁！寺庙巡礼、ICONSIAM购物、铁道奇观、水上集市、夜市探险，感受天使之城的金碧辉煌',
+},
+{
+day: 7,
+label: '5.8 金碧辉煌·寺庙巡礼',
+title: '金碧辉煌·寺庙巡礼',
+color: '#ff6b6b',
+img: '/map-bangkok-day7.png',
+spots: 8,
+desc: '湄南河区酒店坐船→大皇宫+玉佛寺→卧佛寺→Supanniga河景午餐→郑王庙→TYME Rooftop日落→Jodd Fairs夜市',
+},
+{
+day: 8,
+label: '5.9 铁道奇观·水上集市',
+title: '铁道奇观·水上集市',
+color: '#a855f7',
+img: '/map-bangkok-day8.png',
+spots: 6,
+desc: '乍都乍周末市场→包车→美功铁道市场(14:30火车进站)→安帕瓦水上市场→返回曼谷→收拾行李',
+},
 ];
 
 // Singapore map data (4 items: summary first, then 3 days)
