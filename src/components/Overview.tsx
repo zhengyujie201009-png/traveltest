@@ -34,7 +34,15 @@ export default function Overview() {
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
           {itineraryData.map(day => (
-            <a key={day.day} href={`#day-${day.day}`} className="card-hover group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+            <a key={day.day} href={`#day-${day.day}`} onClick={(e) => {
+              e.preventDefault()
+              const cityIdx = day.day <= 3 ? 0 : day.day <= 6 ? 1 : 2
+              window.dispatchEvent(new CustomEvent('switch-city-tab', { detail: cityIdx }))
+              setTimeout(() => {
+                const el = document.getElementById(`day-${day.day}`)
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }, 150)
+            }} className="card-hover group block bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
               <div className="relative h-28 overflow-hidden">
                 <img src={day.headerImg} alt={day.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

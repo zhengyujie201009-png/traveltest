@@ -98,8 +98,12 @@ function ItinerarySection() {
         <div className="flex items-stretch gap-0 justify-center">
           {currentDays.map((day, i) => (
             <div key={day.day} className="flex items-center">
-              <a href={`#day-${day.day}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-white hover:shadow-sm transition-all group">
+              <a href={`#day-${day.day}`} onClick={(e) => {
+                  e.preventDefault()
+                  const el = document.getElementById(`day-${day.day}`)
+                  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }}
+                className="flex items-center gap-2 px-4 py-2 rounded-xl hover:bg-white hover:shadow-sm transition-all group cursor-pointer">
                 <span className="w-7 h-7 rounded-lg flex items-center justify-center text-white text-xs font-bold shrink-0"
                   style={{ background: day.color }}>{day.day}</span>
                 <div className="text-left">
