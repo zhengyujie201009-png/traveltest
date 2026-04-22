@@ -5,6 +5,7 @@ import Overview from './components/Overview'
 import CulturePrep from './components/CulturePrep'
 import SgMap from './components/SgMap'
 import PhuketMap from './components/PhuketMap'
+import BangkokMap from './components/BangkokMap'
 import DayCard from './components/DayCard'
 import PackingList from './components/PackingList'
 import Footer from './components/Footer'
@@ -86,6 +87,7 @@ function ItinerarySection() {
 
       {activeCity === 0 && <SgMap />}
       {activeCity === 1 && <PhuketMap />}
+      {activeCity === 2 && <BangkokMap />}
 
       <div className="my-10">
         <div className="flex items-center gap-3 mb-6">

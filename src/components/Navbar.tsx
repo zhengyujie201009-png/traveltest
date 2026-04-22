@@ -18,7 +18,7 @@ const funcNavItems = [
 const dayGroups = [
   { flag: '🇸🇬', days: [1, 2, 3], mapHref: '#sg-map', cityIdx: 0 },
   { flag: '🇹🇭', days: [4, 5, 6], mapHref: '#phuket-map', cityIdx: 1 },
-  { flag: '🇹🇭', days: [7, 8, 9], mapHref: '#day-7', cityIdx: 2 },
+  { flag: '🇹🇭', days: [7, 8, 9], mapHref: '#bangkok-map', cityIdx: 2 },
 ]
 
 function switchCityTab(cityIdx: number) {
