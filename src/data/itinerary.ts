@@ -1122,7 +1122,7 @@ export const itineraryData: DayItinerary[] = [
         desc: "素万那普机场免税店规模超大！King Power免税店可以买到各种泰国特产：皇家蜂蜜、Naraya曼谷包、泰国手工皂、榴莲干、冬阴功方便面套装。还有各大国际品牌",
         time: "00:30-01:00",
         icon: "fa-cart-shopping",
-        img: "https://images.unsplash.com/photo-1436491865332-7a61a109db05?w=600&q=80",
+        img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
         tips: "推荐买：Naraya曼谷包（送人神器100-300泰铢）、皇家蜂蜜Royal Project、Pocky百力滋泰国限定口味。免税店24小时营业，但凌晨部分柜台可能关闭",
       },
       {
@@ -1138,7 +1138,7 @@ export const itineraryData: DayItinerary[] = [
         desc: "清晨抵达上海浦东机场，带着满满的回忆、晒黑的皮肤、塞满伴手礼的行李箱，和闺蜜们依依不舍地告别。9天8晚，3个国家，无数个难忘瞬间——下次旅行见！",
         time: "06:45",
         icon: "fa-heart",
-        img: "https://images.unsplash.com/photo-1474181628621-fbd52d3e6166?w=600&q=80",
+        img: "https://images.unsplash.com/photo-1524850011238-e3d235c7d4c9?w=600&q=80",
       },
     ],
     meals: [
