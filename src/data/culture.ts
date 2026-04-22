@@ -529,8 +529,66 @@ export const Zd: TabDefinition[] = [
   { type: 'music', label: '🎵 音乐推荐', icon: 'fa-music' },
 ];
 
-// Singapore map data (4 items: 3 days + summary)
+// Phuket map data (Day 3 evening + Day 4)
+export const PhuketMapData: MapDayData[] = [
+  {
+    day: 0,
+    label: '普吉岛全景',
+    title: '普吉岛全景总览',
+    color: '#f97316',
+    img: '/map-phuket-overview.png',
+    spots: 0,
+    desc: '普吉岛全岛地理概览：西海岸三大海滩（芭东·卡伦·卡塔）、普吉镇老城、查龙码头、周边跳岛分布',
+  },
+  {
+    day: 3,
+    label: '5.4 飞向海岛·班赞夜市',
+    title: '飞向海岛·班赞夜市',
+    color: '#4facfe',
+    img: '/map-phuket-day3.png',
+    spots: 3,
+    desc: '新加坡樟宜机场 → 飞普吉岛（18:50-19:50）→ 酒店放行李 → 班赞夜市海鲜大餐（花龙、富贵虾、砍到3-4折）',
+  },
+  {
+    day: 4,
+    label: '5.5 悬崖海景·躺平充电',
+    title: '悬崖海景·躺平充电',
+    color: '#43e97b',
+    img: '/map-phuket-day4.png',
+    spots: 8,
+    desc: '酒店 → The Commune悬崖餐厅 → 卡伦海滩 → 卡塔海滩 → 卡塔观景台日落 → 泰式按摩 → 射击体验(可选) → 晚间表演 → 芭东夜市',
+  },
+  {
+    day: 5,
+    label: '5.6 跳岛全景',
+    title: '跳岛探险全景',
+    color: '#06b6d4',
+    img: '/map-phuket-day5-islands.png',
+    spots: 0,
+    desc: '普吉岛周边跳岛分布：皇帝岛Racha Yai、Maiton私人岛、Koh Bon、珊瑚岛等，从查龙码头出发',
+  },
+  {
+    day: 6,
+    label: '5.7 普吉老城·飞向曼谷',
+    title: '普吉老城·飞向曼谷',
+    color: '#e07a5f',
+    img: '/map-phuket-day6.png',
+    spots: 9,
+    desc: '退房→普吉镇老城→他朗路→浪漫街→街头艺术+甲乙拉寺→One Chun午餐→普吉机场→飞曼谷→暹罗商圈',
+  },
+];
+
+// Singapore map data (4 items: summary first, then 3 days)
 export const Rl: MapDayData[] = [
+  {
+    day: 0,
+    label: '新加坡全景解锁',
+    title: '新加坡全景解锁',
+    color: '#10b981',
+    img: '/map-all.png',
+    spots: 19,
+    desc: '3天19个景点全部解锁！涵盖现代都市、华人文化、印度风情、殖民历史、自然生态、夜间探险六大主题',
+  },
   {
     day: 1,
     label: '5.2 初见狮城',
@@ -557,14 +615,5 @@ export const Rl: MapDayData[] = [
     img: '/map-day3.png',
     spots: 3,
     desc: '新加坡植物园(UNESCO) → 乌节路购物 → 小印度 → 飞往普吉岛',
-  },
-  {
-    day: 0,
-    label: '新加坡全景解锁',
-    title: '新加坡全景解锁',
-    color: '#10b981',
-    img: '/map-all.png',
-    spots: 19,
-    desc: '3天19个景点全部解锁！涵盖现代都市、华人文化、印度风情、殖民历史、自然生态、夜间探险六大主题',
   },
 ];

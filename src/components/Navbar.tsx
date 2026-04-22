@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from 'react'
 
 const normalNavItems = [
-  { label: '概览', href: '#overview' },
-  { label: '文化预习', href: '#culture-prep' },
-  { label: '🇸🇬新加坡', href: '#sg-map' },
-  { label: '🇹🇭普吉岛', href: '#day-4' },
-  { label: '🇹🇭曼谷', href: '#day-7' },
-  { label: '清单', href: '#packing' },
+  { label: '概览', href: '#overview', cityIdx: -1 },
+  { label: '文化预习', href: '#culture-prep', cityIdx: -1 },
+  { label: '🇸🇬新加坡', href: '#itinerary', cityIdx: 0 },
+  { label: '🇹🇭普吉岛', href: '#itinerary', cityIdx: 1 },
+  { label: '🇹🇭曼谷', href: '#itinerary', cityIdx: 2 },
+  { label: '清单', href: '#packing', cityIdx: -1 },
 ]
 
 const funcNavItems = [
@@ -17,7 +17,7 @@ const funcNavItems = [
 
 const dayGroups = [
   { flag: '🇸🇬', days: [1, 2, 3], mapHref: '#sg-map', cityIdx: 0 },
-  { flag: '🇹🇭', days: [4, 5, 6], mapHref: '#day-4', cityIdx: 1 },
+  { flag: '🇹🇭', days: [4, 5, 6], mapHref: '#phuket-map', cityIdx: 1 },
   { flag: '🇹🇭', days: [7, 8, 9], mapHref: '#day-7', cityIdx: 2 },
 ]
 
@@ -147,6 +147,16 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-1">
             {normalNavItems.map((item, i) => (
               <a key={i} href={item.href}
+                onClick={(e) => {
+                  if (item.cityIdx >= 0) {
+                    e.preventDefault()
+                    switchCityTab(item.cityIdx)
+                    setTimeout(() => {
+                      const el = document.getElementById('itinerary')
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                    }, 100)
+                  }
+                }}
                 className={`nav-item px-3 py-1.5 rounded-lg text-sm transition-colors ${scrolled ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>
                 {item.label}
               </a>
