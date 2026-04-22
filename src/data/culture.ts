@@ -533,8 +533,8 @@ export const Zd: TabDefinition[] = [
 export const PhuketMapData: MapDayData[] = [
   {
     day: 0,
-    label: '普吉岛全景',
-    title: '普吉岛全景总览',
+    label: '普吉岛全景解锁',
+    title: '',
     color: '#f97316',
     img: '/map-phuket-overview.png',
     spots: 0,
