@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <h3 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Noto Serif SC', serif" }}>✈️ 新加坡+泰国闺蜜游 · 2026</h3>
-          <p className="text-gray-400 text-sm">3位女生的9天8晚东南亚之旅</p>
+          <p className="text-gray-400 text-sm">4位女生的9天8晚东南亚之旅</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 text-center">
           {[

@@ -213,7 +213,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "飞机(上海→香港→新加坡) + 地铁",
-    budget: 1500,
+    budget: 2200,
   },
   {
     day: 2,
@@ -462,7 +462,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "地铁到牛车水站 → 步行约5km → Bugis地铁到Khatib转接驳车",
-    budget: 600,
+    budget: 1300,
   },
   {
     day: 3,
@@ -621,7 +621,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "地铁植物园站(西北)→乌节路(中西)→小印度(中东)→樟宜机场(东)",
-    budget: 1200,
+    budget: 1700,
   },
   {
     day: 4,
@@ -678,9 +678,17 @@ export const itineraryData: DayItinerary[] = [
         },
       },
       {
+        name: "Thai Noodle Restaurant 船面",
+        desc: "姐妹强推的普吉岛最好吃的船面（Boat Noodles）！位于卡马拉到芭东的路上，小碗浓郁的牛肉/猪肉汤面，汤底用多种香料和药材熬制，一碗只有几口但味道极其浓缩。泰国传统吃法是一人点5-10碗，叠碗比赛超有趣",
+        time: "17:00-18:00",
+        icon: "fa-bowl-food",
+        img: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80",
+        tips: "地址：81 Kammala-Patong Rd, Kamala, Kathu, Phuket 83150。从卡塔打Grab约20分钟，在去芭东的路上顺路。船面约15-30泰铢/碗，一人点5-10碗才够吃，总共也就100-200泰铢超划算",
+      },
+      {
         name: "泰式按摩 · 满血复活",
-        desc: "回到住处附近做一个正宗泰式按摩，2小时全身精油SPA，把前3天暴走的疲劳全部消除。卡伦/卡塔街上按摩店很多，价格比芭东更实惠",
-        time: "17:30-19:30",
+        desc: "到芭东附近做一个正宗泰式按摩，2小时全身精油SPA，把前3天暴走的疲劳全部消除。芭东街上按摩店很多，选择丰富",
+        time: "18:15-19:30",
         icon: "fa-spa",
         img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
         tips: "泰式按摩约300-500泰铢/小时，精油SPA约800-1200泰铢/2小时。Let's Relax连锁品质不错",
@@ -739,6 +747,12 @@ export const itineraryData: DayItinerary[] = [
         ],
       },
       {
+        type: "下午茶",
+        name: "Thai Noodle Restaurant 船面",
+        icon: "fa-bowl-food",
+        price: "~100-200泰铢/人",
+      },
+      {
         type: "晚餐",
         name: "看表演前后用餐",
         icon: "fa-utensils",
@@ -762,7 +776,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "突突车（卡伦↔卡塔 约100泰铢/程，去芭东约200泰铢）",
-    budget: 1000,
+    budget: 1600,
   },
   {
     day: 5,
@@ -818,7 +832,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "酒店接送 + 快艇",
-    budget: 800,
+    budget: 1300,
   },
   {
     day: 6,
@@ -918,7 +932,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "Grab(卡伦→普吉镇~300泰铢) + Grab(普吉镇→机场~300泰铢) + 飞机(普吉→曼谷) + Grab(机场→酒店)",
-    budget: 1200,
+    budget: 1700,
   },
   {
     day: 7,
@@ -979,19 +993,28 @@ export const itineraryData: DayItinerary[] = [
         tips: "地址：61 Maharat Rd，从郑王庙坐船回东岸步行6分钟。鸡尾酒约300-400泰铢/杯。日落前到才能占到好位置！",
       },
       {
-        name: "回酒店休整 → 换装",
-        desc: "从TYME坐船回湄南河区酒店，步行几分钟就到，比住暹罗区省了转BTS的时间。洗澡换衣服，准备晚上的夜市之旅。曼谷的夜晚才是真正的开始！",
-        time: "17:30-19:00",
-        icon: "fa-hotel",
-        img: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80",
+        name: "The Commons Thonglor",
+        desc: "曼谷最有设计感的社区商场！开放式多层建筑，汇集了独立咖啡店、创意餐厅、手工啤酒吧和生活方式小店。文艺氛围浓厚，每一层都有不同的惊喜，是闺蜜拍照逛吃的绝佳去处",
+        time: "17:30-18:30",
+        icon: "fa-store",
+        img: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80",
+        tips: "地址：335 Sukhumvit Rd, Thong Lo 17 Alley。从TYME坐船到Saphan Taksin再转BTS到Thong Lo站，步行3分钟到。营业8am-1am。推荐逛Ground层的美食区和顶层的露天平台",
+      },
+      {
+        name: "GalileOasis 艺术画廊咖啡",
+        desc: "隐藏在曼谷的精品艺术空间，集画廊、咖啡厅和精品酒店于一体。不定期举办当代艺术展览，空间设计感十足，院子里还有很多可爱的猫咪。点一杯咖啡，在艺术氛围中短暂休憩",
+        time: "18:30-19:15",
+        icon: "fa-palette",
+        img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&q=80",
+        tips: "距Siam Discovery约1.9km，Banthat Thong Road附近。从The Commons打Grab约15分钟。免费参观画廊，咖啡约100-200泰铢。周围的Banthat Thong Road也是曼谷隐藏美食街",
       },
       {
         name: "Jodd Fairs 乔德夜市",
         desc: "曼谷最火的夜市！干净整洁的摊位排列整齐，有各种泰国街头美食和创意餐车。必吃火山排骨（整块排骨在火山石上滋滋冒烟端上来）、生腌虾、芒果糯米饭、泰式奶茶",
-        time: "19:00-22:00",
+        time: "19:30-22:00",
         icon: "fa-fire",
         img: "https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80",
-        tips: "MRT Phra Ram 9站，Central Rama 9后方。16:00开始营业但建议19:00后去氛围最好。火山排骨约299泰铢必点！人很多但通道比较窄，注意随身物品",
+        tips: "MRT Phra Ram 9站，Central Rama 9后方。从GalileOasis打Grab约15分钟。16:00开始营业但建议19:00后去氛围最好。火山排骨约299泰铢必点！人很多但通道比较窄，注意随身物品",
       },
     ],
     meals: [
@@ -1015,7 +1038,7 @@ export const itineraryData: DayItinerary[] = [
       },
     ],
     transport: "湄南河快船(15泰铢) + 摆渡船(4泰铢) + MRT",
-    budget: 800,
+    budget: 1300,
   },
   {
     day: 8,
@@ -1028,9 +1051,17 @@ export const itineraryData: DayItinerary[] = [
     color: "#a855f7",
     spots: [
       {
+        name: "退房寄存行李 · 出发",
+        desc: "今天是曼谷最后一天，早上退房后把行李寄存在酒店前台（大部分酒店免费寄存到当晚），轻装出发开始一天的探索",
+        time: "08:30-09:00",
+        icon: "fa-suitcase-rolling",
+        img: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&q=80",
+        tips: "退房时告知前台晚上会回来取行李，一般可免费寄存。贵重物品随身带",
+      },
+      {
         name: "乍都乍周末市场 Chatuchak",
         desc: "东南亚最大的周末市场，超过15000个摊位分成27个区！从手工艺品、vintage服饰、泰丝、椰子碗、香薰精油到各种小吃应有尽有。周六开门，今天是扫货伴手礼的最后机会",
-        time: "09:00-12:00",
+        time: "09:30-12:00",
         icon: "fa-shop",
         img: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80",
         tips: "从湄南河区酒店坐BTS Gold Line到Silom再转BTS到Mo Chit站，约40分钟。9点开门就到，中午前逛完！必逛：Section 2-4（手工艺品）、Section 7（泰裤/棉麻衣服）、Section 17-19（家居香薰）。带现金砍价，开价的6-7折起砍",
@@ -1068,12 +1099,12 @@ export const itineraryData: DayItinerary[] = [
         tips: "回程走Rama 2高速直达湄南河区，不用穿越市中心。如果想看萤火虫可以等到19:00天黑后再出发，20:30-21:00到酒店",
       },
       {
-        name: "回酒店收拾行李",
-        desc: "最后的曼谷夜晚，回酒店整理行李、称重、分装伴手礼。凌晨01:25的红眼航班，23:30前从酒店出发去机场",
-        time: "21:00-23:30",
-        icon: "fa-suitcase",
-        img: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&q=80",
-        tips: "提前把要托运和随身的行李分好。泰国特产（榴莲干、冬阴功方便面、小老板海苔）可以在机场免税店买，不用塞行李箱",
+        name: "回酒店取行李 · Puponfai外卖宵夜",
+        desc: "回到酒店取寄存的行李，同时提前用Grab Food点Puponfai（ปูพ่นไฟ）外卖送到酒店大堂！这家从外卖厨房起家的网红海鲜店，炭烤大虾和火焰蟹是招牌，在酒店餐厅区域边吃边整理行李，作为曼谷最后一顿完美收官",
+        time: "21:00-23:00",
+        icon: "fa-shrimp",
+        img: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80",
+        tips: "点外卖方法：打开Grab App → Food → 搜索\"Puponfai\"或\"ปูพ่นไฟ\" → 推荐点：炭烤大虾（กุ้งเผา）、火焰蟹（ปูพ่นไฟ招牌）、蒜蓉粉丝蒸虾。人均约300-500泰铢。也可以用LINE MAN点。建议20:30从安帕瓦回程路上就下单，到酒店刚好送到",
       },
     ],
     meals: [
@@ -1095,9 +1126,15 @@ export const itineraryData: DayItinerary[] = [
         icon: "fa-shrimp",
         price: "~300泰铢/人",
       },
+      {
+        type: "宵夜",
+        name: "Puponfai外卖海鲜（ปูพ่นไฟ）",
+        icon: "fa-shrimp",
+        price: "~400泰铢/人",
+      },
     ],
     transport: "BTS(酒店→Mo Chit) + 包车(乍都乍→美功→安帕瓦→酒店 约2000-2500泰铢)",
-    budget: 1200,
+    budget: 1600,
   },
   {
     day: 9,
@@ -1184,7 +1221,7 @@ export const packingList: PackingCategory[] = [
 
 export const budgetConfig: BudgetConfig = {
   transport: 3500,
-  hotel: 4000,
+  hotel: 3900,
   food: 2500,
   tickets: 1000,
   shopping: 2000,
@@ -1200,7 +1237,7 @@ export const budgetCategories: BudgetCategory[] = [
   },
   {
     label: "住宿",
-    amount: 4000,
+    amount: 3900,
     color: "#f5576c",
     icon: "fa-hotel",
   },
@@ -1230,4 +1267,4 @@ export const budgetCategories: BudgetCategory[] = [
   },
 ];
 
-export const totalBudget: number = 14000;
+export const totalBudget: number = 16500;
