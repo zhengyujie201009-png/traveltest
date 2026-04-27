@@ -528,6 +528,14 @@ export const itineraryData: DayItinerary[] = [
         img: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=600&q=80",
       },
       {
+        name: "入住芭东皇家帕瓦迪酒店",
+        desc: "抵达普吉岛机场，Grab约40分钟到芭东皇家帕瓦迪酒店（Royal Paradise Hotel Patong）check in。放下行李，稍作休息后前往班赞夜市",
+        time: "19:50-20:30",
+        icon: "fa-hotel",
+        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
+        tips: "地址：芭东海滩区域，具体地址请查看预订确认单。5月4日入住",
+      },
+      {
         name: "班赞夜市 Banzaan Fresh Market",
         desc: "芭东海滩核心地带，紧邻江西冷购物中心斜对面（Rat-U-Thit 200 Pee Road 181号）。白天是生鲜市场，傍晚变身热闹夜市。一楼买海鲜，二楼加工，现买现做！姐妹推荐必吃：花龙（花龙虾）、富贵虾，个头超大鲜甜无比",
         time: "20:30-22:30",
@@ -620,7 +628,7 @@ export const itineraryData: DayItinerary[] = [
         ],
       },
     ],
-    transport: "地铁植物园站(西北)→乌节路(中西)→小印度(中东)→樟宜机场(东)",
+    transport: "地铁植物园站(西北)→乌节路(中西)→小印度(中东)→樟宜机场(东) + 飞机(新加坡→普吉岛) + Grab(机场→芭东皇家帕瓦迪酒店~400泰铢) + Grab(酒店→班赞~100泰铢)",
     budget: 1700,
   },
   {
@@ -634,12 +642,12 @@ export const itineraryData: DayItinerary[] = [
     color: "#43e97b",
     spots: [
       {
-        name: "睡到自然醒 · 酒店早餐",
-        desc: "前3天暴走太累了！今天没有闹钟，睡到自然醒，慢悠悠去吃个酒店早餐，开启彻底放松的一天",
-        time: "09:00-10:30",
-        icon: "fa-bed",
+        name: "芭东皇家帕瓦迪酒店醒来 · 收拾行李",
+        desc: "在芭东皇家帕瓦迪酒店睡到自然醒，慢悠悠吃个早餐，然后收拾行李准备前往卡塔海滩。今天要换酒店，所以需要把行李收拾好",
+        time: "09:00-10:00",
+        icon: "fa-suitcase-rolling",
         img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
-        tips: "不赶行程就是最好的行程",
+        tips: "退房时把行李寄存在前台，下午去卡塔海滩后再来取",
       },
       {
         name: "The Commune 悬崖餐厅",
@@ -678,9 +686,17 @@ export const itineraryData: DayItinerary[] = [
         },
       },
       {
+        name: "入住卡塔坦尼海滩度假村",
+        desc: "从芭东皇家帕瓦迪酒店取行李，Grab约30分钟前往卡塔坦尼海滩度假村（The Kata Thani Beach Resort）入住。这是一家位于卡塔海滩的度假酒店，拥有私人海滩和绝美海景。5月5日入住",
+        time: "17:00-18:00",
+        icon: "fa-hotel",
+        img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+        tips: "卡塔海滩比芭东更安静，海水更清澈。度假村有私人海滩，适合放松",
+      },
+      {
         name: "Thai Noodle Restaurant 船面",
         desc: "姐妹强推的普吉岛最好吃的船面（Boat Noodles）！位于卡马拉到芭东的路上，小碗浓郁的牛肉/猪肉汤面，汤底用多种香料和药材熬制，一碗只有几口但味道极其浓缩。泰国传统吃法是一人点5-10碗，叠碗比赛超有趣",
-        time: "17:00-18:00",
+        time: "18:00-19:00",
         icon: "fa-bowl-food",
         img: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80",
         tips: "地址：81 Kammala-Patong Rd, Kamala, Kathu, Phuket 83150。从卡塔打Grab约20分钟，在去芭东的路上顺路。船面约15-30泰铢/碗，一人点5-10碗才够吃，总共也就100-200泰铢超划算",
@@ -688,7 +704,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "泰式按摩 · 满血复活",
         desc: "到芭东附近做一个正宗泰式按摩，2小时全身精油SPA，把前3天暴走的疲劳全部消除。芭东街上按摩店很多，选择丰富",
-        time: "18:15-19:30",
+        time: "19:15-20:30",
         icon: "fa-spa",
         img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80",
         tips: "泰式按摩约300-500泰铢/小时，精油SPA约800-1200泰铢/2小时。Let's Relax连锁品质不错",
@@ -696,7 +712,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "🔫 射击体验（可选）",
         desc: "Patong Paragon Gun Shooting Range，就在芭东！真枪实弹射击体验，有手枪、步枪、霰弹枪可选，全程专业教练一对一指导，零基础也能玩。有中文工作人员，沟通无障碍。到芭东后先打枪再看表演，肾上腺素拉满的一天",
-        time: "19:30-20:00",
+        time: "20:30-21:00",
         icon: "fa-crosshairs",
         img: "https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=600&q=80",
         tips: "推荐在Klook提前订票更便宜，套餐约800-2000泰铢/人（含10-30发子弹）。到了现场加弹另付。拍照打卡超酷！注意：这是可选项目，不想去可以跳过直接看表演",
@@ -704,7 +720,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "晚间表演（二选一）",
         desc: "① Simon Cabaret 西蒙人妖秀：芭东经典，华丽歌舞约1小时，每天18:00/19:30/21:00三场，约800泰铢/人，就在芭东很近。② Phuket FantaSea 幻多奇：大型泰国文化主题乐园+魔幻大秀，含自助晚餐，约1800泰铢/人，5月5日周二刚好开放！在卡马拉方向约30分钟车程",
-        time: "20:30-22:00",
+        time: "21:00-22:30",
         icon: "fa-masks-theater",
         img: "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600&q=80",
         tips: "Simon Cabaret推荐21:00场（如果先去射击的话）。FantaSea推荐提前在Klook买票更便宜，含酒店接送",
@@ -712,7 +728,7 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "芭东夜市闲逛",
         desc: "看完表演顺路逛芭东夜市！芭东的夜生活超丰富，街头小吃摊、纪念品店、酒吧一条街应有尽有。买点小吃边走边吃，淘点手信伴手礼，感受普吉岛最热闹的夜晚氛围",
-        time: "22:00-23:30",
+        time: "22:30-23:30",
         icon: "fa-store",
         img: "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f?w=600&q=80",
         tips: "芭东夜市就在Bangla Road（邦古拉街）周边，纪念品记得砍价。路边的烤串、芒果糯米饭、椰子冰淇淋都值得试",
@@ -775,7 +791,7 @@ export const itineraryData: DayItinerary[] = [
         ],
       },
     ],
-    transport: "突突车（卡伦↔卡塔 约100泰铢/程，去芭东约200泰铢）",
+    transport: "Grab(芭东→卡塔~200泰铢) + 突突车（卡伦↔卡塔 约100泰铢/程，去芭东约200泰铢）",
     budget: 1600,
   },
   {
@@ -789,9 +805,17 @@ export const itineraryData: DayItinerary[] = [
     color: "#fa709a",
     spots: [
       {
+        name: "卡塔坦尼海滩度假村醒来 · 收拾行李",
+        desc: "在卡塔坦尼海滩度假村睡到自然醒，慢悠悠吃个早餐，然后收拾行李准备跳岛游。今天要换酒店，所以需要把行李收拾好",
+        time: "08:00-08:30",
+        icon: "fa-suitcase-rolling",
+        img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80",
+        tips: "退房时把行李寄存在前台，跳岛游回来后再来取",
+      },
+      {
         name: "跳岛游出发",
-        desc: "乘坐快艇出发前往皮皮岛或皇帝岛，感受安达曼海的碧蓝",
-        time: "08:00-09:00",
+        desc: "从卡塔坦尼海滩度假村出发，乘坐快艇前往皮皮岛或皇帝岛，感受安达曼海的碧蓝",
+        time: "08:30-09:00",
         icon: "fa-ship",
         img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80",
         tips: "晕船的提前吃晕船药",
@@ -799,22 +823,37 @@ export const itineraryData: DayItinerary[] = [
       {
         name: "浮潜 & 海上活动",
         desc: "在清澈海水中浮潜，观赏五彩斑斓的珊瑚和热带鱼群",
-        time: "10:00-14:00",
+        time: "09:30-13:30",
         icon: "fa-water",
         img: "https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=600&q=80",
       },
       {
+        name: "岛上午餐",
+        desc: "在岛上享用午餐，补充能量",
+        time: "13:30-14:30",
+        icon: "fa-plate-wheat",
+        img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80",
+      },
+      {
         name: "海岛漫步",
         desc: "在洁白沙滩上漫步，拍摄绝美海景大片",
-        time: "14:00-16:00",
+        time: "14:30-16:00",
         icon: "fa-camera",
         img: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&q=80",
+      },
+      {
+        name: "入住阿诺娜日落精品酒店",
+        desc: "从卡塔坦尼海滩度假村取行李，Grab约30分钟前往阿诺娜日落精品酒店（Arona Sunset Boutique Hotel）入住。这是一家位于普吉岛的精品酒店，拥有绝美的日落视野。5月6日入住",
+        time: "16:30-17:30",
+        icon: "fa-hotel",
+        img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80",
+        tips: "阿诺娜日落精品酒店在普吉岛，拥有绝美的日落视野，建议提前预订",
       },
     ],
     meals: [
       {
         type: "早餐",
-        name: "酒店早餐",
+        name: "卡塔坦尼海滩度假村早餐",
         icon: "fa-mug-hot",
         price: "含住宿",
       },
@@ -826,12 +865,12 @@ export const itineraryData: DayItinerary[] = [
       },
       {
         type: "晚餐",
-        name: "海鲜大餐",
+        name: "阿诺娜日落精品酒店附近晚餐",
         icon: "fa-shrimp",
         price: "~500泰铢/人",
       },
     ],
-    transport: "酒店接送 + 快艇",
+    transport: "酒店接送 + 快艇 + Grab(卡塔→阿诺娜~300泰铢)",
     budget: 1300,
   },
   {
@@ -845,8 +884,8 @@ export const itineraryData: DayItinerary[] = [
     color: "#e07a5f",
     spots: [
       {
-        name: "退房 → 普吉镇",
-        desc: "从卡伦/卡塔酒店退房，Grab约30分钟抵达普吉镇老城区，行李寄存在咖啡馆或寄存点",
+        name: "从阿诺娜日落精品酒店退房 → 普吉镇",
+        desc: "从阿诺娜日落精品酒店退房，Grab约30分钟抵达普吉镇老城区，行李寄存在咖啡馆或寄存点",
         time: "08:30-09:30",
         icon: "fa-suitcase-rolling",
         img: "https://images.unsplash.com/photo-1600002415506-dd06090d3480?w=600&q=80",
@@ -901,20 +940,20 @@ export const itineraryData: DayItinerary[] = [
         tips: "普吉→曼谷航班很多，亚航、泰狮航等廉航约500-1000泰铢/人",
       },
       {
-        name: "入住湄南河区酒店",
-        desc: "抵达曼谷素万那普机场，Grab约40分钟到湄南河区酒店check in。选择河畔酒店，方便明天坐船礼佛、后天出发去美功铁道",
+        name: "入住UHG四分之一拉查于丁酒店",
+        desc: "抵达曼谷素万那普机场，Grab约40分钟到UHG四分之一拉查于丁酒店（UHG The Quarter Ratchada）check in。这是一家位于拉查达路的精品酒店，靠近MRT泰国文化中心站，交通便利。5月7日入住",
         time: "18:00-19:00",
         icon: "fa-hotel",
         img: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80",
-        tips: "推荐住ICONSIAM附近的河畔酒店，BTS Gold Line Charoen Nakhon站直达。河景房看湄南河夜景超美",
+        tips: "地址：拉查达路，靠近MRT泰国文化中心站。酒店位置方便，去暹罗商圈和各大景点都很近",
       },
       {
-        name: "ICONSIAM 暹罗天地",
-        desc: "曼谷最大最豪华的河畔商场！7层购物天堂，G层有室内水上市场Sook Siam（还原了泰国四大地区的传统市集，各种街头小吃和手工艺品）。把买买买前置到今晚，明后天就能安心玩！",
+        name: "暹罗广场 + 暹罗天地",
+        desc: "曼谷两大购物天堂！暹罗广场（Siam Square）是年轻人的潮流聚集地，各种潮牌、咖啡馆、小吃店应有尽有。暹罗天地（ICONSIAM）是曼谷最大最豪华的河畔商场，G层有室内水上市场Sook Siam。今晚先逛逛，到时候视情况去哪个或都去",
         time: "19:00-22:00",
         icon: "fa-cart-shopping",
         img: "https://images.unsplash.com/photo-1563492065599-3520f775eeed?w=600&q=80",
-        tips: "营业到22:00。Sook Siam室内水上市场必逛！芒果糯米饭、船粿条、泰式奶茶都超好吃。Boots/屈臣氏买泰国护肤品（Snail White蜗牛霜、Mistine防晒）。NaRaYa曼谷包这里也有专柜",
+        tips: "备注：到时候看情况去暹罗广场或暹罗天地，或者两个都去。暹罗广场更年轻潮流，暹罗天地更豪华。Boots/屈臣氏买泰国护肤品（Snail White蜗牛霜、Mistine防晒）。NaRaYa曼谷包暹罗天地也有专柜",
       },
     ],
     meals: [
@@ -931,7 +970,7 @@ export const itineraryData: DayItinerary[] = [
         price: "~300泰铢/人",
       },
     ],
-    transport: "Grab(卡伦→普吉镇~300泰铢) + Grab(普吉镇→机场~300泰铢) + 飞机(普吉→曼谷) + Grab(机场→酒店)",
+    transport: "Grab(阿诺娜→普吉镇~300泰铢) + Grab(普吉镇→机场~300泰铢) + 飞机(普吉→曼谷) + Grab(机场→UHG酒店~400泰铢)",
     budget: 1700,
   },
   {
@@ -945,12 +984,12 @@ export const itineraryData: DayItinerary[] = [
     color: "#ff6b6b",
     spots: [
       {
-        name: "酒店出发 → 大皇宫",
-        desc: "从湄南河区酒店出发，步行到附近码头乘湄南河快船（Chao Phraya Express Boat）到N9 Tha Chang码头，沿途欣赏湄南河两岸风光。住在河边最大的好处就是直接上船！",
+        name: "UHG酒店出发 → 大皇宫",
+        desc: "从UHG四分之一拉查于丁酒店出发，MRT泰国文化中心站坐到Si Phraya站，然后步行到码头乘湄南河快船（Chao Phraya Express Boat）到N9 Tha Chang码头",
         time: "07:30-08:30",
         icon: "fa-ship",
         img: "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=600&q=80",
-        tips: "河畔酒店步行几分钟就到码头，比住暹罗区还要转BTS再换船方便太多！橙旗船15泰铢/人，到N9 Tha Chang码头下船。一定要8:30前到大皇宫，避开旅行团大军",
+        tips: "MRT泰国文化中心站→Si Phraya站约20分钟，橙旗船15泰铢/人，到N9 Tha Chang码头下船。一定要8:30前到大皇宫，避开旅行团大军",
       },
       {
         name: "大皇宫 + 玉佛寺",
@@ -1037,7 +1076,7 @@ export const itineraryData: DayItinerary[] = [
         price: "~300泰铢/人",
       },
     ],
-    transport: "湄南河快船(15泰铢) + 摆渡船(4泰铢) + MRT",
+    transport: "MRT(泰国文化中心→Si Phraya) + 湄南河快船(15泰铢) + 摆渡船(4泰铢) + Grab",
     budget: 1300,
   },
   {
@@ -1051,8 +1090,8 @@ export const itineraryData: DayItinerary[] = [
     color: "#a855f7",
     spots: [
       {
-        name: "退房寄存行李 · 出发",
-        desc: "今天是曼谷最后一天，早上退房后把行李寄存在酒店前台（大部分酒店免费寄存到当晚），轻装出发开始一天的探索",
+        name: "UHG酒店出发 · 退房寄存行李",
+        desc: "今天是曼谷最后一天，早上从UHG四分之一拉查于丁酒店退房后把行李寄存在酒店前台，轻装出发开始一天的探索。晚上继续入住UHG酒店",
         time: "08:30-09:00",
         icon: "fa-suitcase-rolling",
         img: "https://images.unsplash.com/photo-1553531384-cc64ac80f931?w=600&q=80",
@@ -1064,7 +1103,7 @@ export const itineraryData: DayItinerary[] = [
         time: "09:30-12:00",
         icon: "fa-shop",
         img: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=600&q=80",
-        tips: "从湄南河区酒店坐BTS Gold Line到Silom再转BTS到Mo Chit站，约40分钟。9点开门就到，中午前逛完！必逛：Section 2-4（手工艺品）、Section 7（泰裤/棉麻衣服）、Section 17-19（家居香薰）。带现金砍价，开价的6-7折起砍",
+        tips: "从UHG酒店MRT泰国文化中心站坐到Chatuchak Park站，约20分钟。9点开门就到，中午前逛完！必逛：Section 2-4（手工艺品）、Section 7（泰裤/棉麻衣服）、Section 17-19（家居香薰）。带现金砍价，开价的6-7折起砍",
       },
       {
         name: "包车出发 → 美功铁道市场",
@@ -1072,7 +1111,7 @@ export const itineraryData: DayItinerary[] = [
         time: "12:30-14:00",
         icon: "fa-van-shuttle",
         img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80",
-        tips: "建议在Klook/KKday提前预订美功+安帕瓦半日包车游，4人包车约2000-2500泰铢。从湄南河区出发比暹罗区少穿越半个市区，省20-30分钟。车上可以补觉休息",
+        tips: "建议在Klook/KKday提前预订美功+安帕瓦半日包车游，4人包车约2000-2500泰铢。从乍都乍出发比暹罗区少穿越半个市区，省20-30分钟。车上可以补觉休息",
       },
       {
         name: "美功铁道市场 Maeklong Railway Market",
@@ -1092,15 +1131,15 @@ export const itineraryData: DayItinerary[] = [
       },
       {
         name: "安帕瓦晚餐 → 返回曼谷",
-        desc: "在水上市场吃完河鲜晚餐后，包车返回曼谷湄南河区酒店，车程约1.5小时。在车上回味今天从都市市集到铁道奇观再到水上人家的奇妙一天",
+        desc: "在水上市场吃完河鲜晚餐后，包车返回曼谷，车程约1.5小时。直接返回UHG四分之一拉查于丁酒店",
         time: "18:30-20:30",
         icon: "fa-car",
         img: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80",
-        tips: "回程走Rama 2高速直达湄南河区，不用穿越市中心。如果想看萤火虫可以等到19:00天黑后再出发，20:30-21:00到酒店",
+        tips: "回程走Rama 2高速直达拉查达路，不用穿越市中心。如果想看萤火虫可以等到19:00天黑后再出发，20:30-21:00到酒店",
       },
       {
         name: "回酒店取行李 · Puponfai外卖宵夜",
-        desc: "回到酒店取寄存的行李，同时提前用Grab Food点Puponfai（ปูพ่นไฟ）外卖送到酒店大堂！这家从外卖厨房起家的网红海鲜店，炭烤大虾和火焰蟹是招牌，在酒店餐厅区域边吃边整理行李，作为曼谷最后一顿完美收官",
+        desc: "回到UHG四分之一拉查于丁酒店取行李，同时提前用Grab Food点Puponfai（ปูพ่นไฟ）外卖送到酒店大堂！这家从外卖厨房起家的网红海鲜店，炭烤大虾和火焰蟹是招牌，在酒店餐厅区域边吃边整理行李，作为曼谷最后一顿完美收官。5月7日-5月8日入住",
         time: "21:00-23:00",
         icon: "fa-shrimp",
         img: "https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80",
@@ -1133,7 +1172,7 @@ export const itineraryData: DayItinerary[] = [
         price: "~400泰铢/人",
       },
     ],
-    transport: "BTS(酒店→Mo Chit) + 包车(乍都乍→美功→安帕瓦→酒店 约2000-2500泰铢)",
+    transport: "MRT(泰国文化中心→Chatuchak Park) + 包车(乍都乍→美功→安帕瓦→UHG酒店 约2000-2500泰铢)",
     budget: 1600,
   },
   {
@@ -1147,12 +1186,12 @@ export const itineraryData: DayItinerary[] = [
     color: "#06b6d4",
     spots: [
       {
-        name: "酒店 → 素万那普机场",
-        desc: "从湄南河区酒店出发前往素万那普国际机场。深夜打车最方便，Grab约300-400泰铢，车程约40分钟。提前3小时到机场办理值机和退税",
+        name: "UHG四分之一拉查于丁酒店 → 素万那普机场",
+        desc: "从UHG四分之一拉查于丁酒店出发前往素万那普国际机场。深夜打车最方便，Grab约300-400泰铢，车程约40分钟。提前3小时到机场办理值机和退税",
         time: "23:30-00:30",
         icon: "fa-taxi",
         img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80",
-        tips: "深夜Airport Rail Link已停运，打Grab最稳妥。湄南河区走高速到素万那普很顺畅。记得留200泰铢现金付机场行李车费。退税柜台在4楼出发层",
+        tips: "深夜Airport Rail Link已停运，打Grab最稳妥。拉查达路走高速到素万那普很顺畅。记得留200泰铢现金付机场行李车费。退税柜台在4楼出发层",
       },
       {
         name: "机场免税店 · 最后扫货",
@@ -1221,7 +1260,7 @@ export const packingList: PackingCategory[] = [
 
 export const budgetConfig: BudgetConfig = {
   transport: 3500,
-  hotel: 3900,
+  hotel: 2760.98,
   food: 2500,
   tickets: 1000,
   shopping: 2000,
@@ -1237,7 +1276,7 @@ export const budgetCategories: BudgetCategory[] = [
   },
   {
     label: "住宿",
-    amount: 3900,
+    amount: 2760.98,
     color: "#f5576c",
     icon: "fa-hotel",
   },
@@ -1267,4 +1306,4 @@ export const budgetCategories: BudgetCategory[] = [
   },
 ];
 
-export const totalBudget: number = 16500;
+export const totalBudget: number = 15360.98;
